@@ -143,8 +143,5 @@ typeof(int)
 typeof(char)
 typeof(logi)
 ```
-#class()
-```{r}
 
-```
 
