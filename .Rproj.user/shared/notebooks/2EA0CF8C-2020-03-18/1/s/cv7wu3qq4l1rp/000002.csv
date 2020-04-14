@@ -1,0 +1,67 @@
+"0","install.packages(c(""googlesheets4"",""tidyverse""))"
+"2","WARNING: Rtools is required to build R packages but is not currently installed. Please download and install the appropriate version of Rtools before proceeding:
+
+https://cran.rstudio.com/bin/windows/Rtools/
+"
+"2","Installing packages into ¡¥C:/Users/anita/Documents/R/win-library/3.5¡¦
+(as ¡¥lib¡¦ is unspecified)
+"
+"2","å˜—è©¦ URL 'https://cran.rstudio.com/bin/windows/contrib/3.5/googlesheets4_0.1.1.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 179279 bytes (175 KB)
+"
+"2","downloaded 175 KB
+
+"
+"2","å˜—è©¦ URL 'https://cran.rstudio.com/bin/windows/contrib/3.5/tidyverse_1.3.0.zip'
+"
+"2","Content type 'application/zip'"
+"2"," length 439602 bytes (429 KB)
+"
+"2","downloaded 429 KB
+
+"
+"1","package â€˜googlesheets4â€™ successfully unpacked and MD5 sums checked
+"
+"1","package â€˜tidyverseâ€™ successfully unpacked and MD5 sums checked
+"
+"1","
+"
+"1",""
+"1","The downloaded binary packages are in
+	C:\Users\anita\AppData\Local\Temp\RtmpmO5X87\downloaded_packages"
+"1",""
+"1","
+"
+"0","library(googlesheets4)"
+"2","package ¡¥googlesheets4¡¦ was built under R version 3.5.3"
+"0","library(dplyr)"
+"2","package ¡¥dplyr¡¦ was built under R version 3.5.3"
+"2","
+Attaching package: ¡¥dplyr¡¦
+
+"
+"2","The following objects are masked from ¡¥package:stats¡¦:
+
+    filter, lag
+
+"
+"2","The following objects are masked from ¡¥package:base¡¦:
+
+    intersect, setdiff, setequal, union
+
+"
+"0","library(lubridate)"
+"2","package ¡¥lubridate¡¦ was built under R version 3.5.3"
+"2","
+Attaching package: ¡¥lubridate¡¦
+
+"
+"2","The following object is masked from ¡¥package:base¡¦:
+
+    date
+
+"
+"0","library(stringr)"
+"2","package ¡¥stringr¡¦ was built under R version 3.5.3"

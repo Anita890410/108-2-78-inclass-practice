@@ -1,6 +1,0 @@
-"0","sum(as.integer(fiveReceipts))"
-"1","[1]"
-"1"," 21"
-"1","
-"
-"0","sum_fiveReceipts <- sum(as.integer(fiveReceipts))"
