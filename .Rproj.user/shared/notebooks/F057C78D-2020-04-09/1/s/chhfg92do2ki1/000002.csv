@@ -1,4 +1,4 @@
-"0","selectedMarkets <-rep(F,14) #repeat F"
+"0","selectedMarkets <-rep(F,14) #repeat F by 14 times"
 "0","print(selectedMarkets)"
 "1"," [1]"
 "1"," FALSE"
