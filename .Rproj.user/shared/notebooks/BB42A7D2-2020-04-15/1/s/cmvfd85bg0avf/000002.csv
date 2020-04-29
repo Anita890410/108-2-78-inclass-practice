@@ -1,10 +1,3 @@
 "0","weather[[1]][[2]]$highest_temp # 今天/新北市/highest_temp"
-"1","highest_temp "
-"1","
-"
-"1","          24 "
-"1","
-"
-"0","weather[[2]][[2]]$highest_temp # 明天/新北市/highest_temp"
-"1","NULL
+"2","錯誤: 找不到物件 'weather'
 "
