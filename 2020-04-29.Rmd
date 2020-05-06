@@ -150,7 +150,6 @@ example$birthday
 class(example$birthday)
 typeof(example$birthday)
 ```
-
 ```{r}
 print(example[c("name","birthday")])
 #pick_after98 <- example$birthday >= "1998-01-01"

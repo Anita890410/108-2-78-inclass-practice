@@ -1,2 +1,5 @@
 "0","set_LawBusiness <- c(""法學院"",""商學院"")"
 "0","pick_LawBusiness <- transcript100to103$學院 %in% set_LawBusiness"
+"2","Error in transcript100to103$學院 %in% set_LawBusiness : 
+  找不到物件 'transcript100to103'
+"
