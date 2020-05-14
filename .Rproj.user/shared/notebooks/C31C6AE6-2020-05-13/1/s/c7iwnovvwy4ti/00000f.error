@@ -1,0 +1,1 @@
+{"frames":[],"message":"Error in fromJSON(\"https://od.cdc.gov.tw/eic/Day_Confirmation_Age_County_Gender_19CoV.json\") : \n  沒有這個函數 \"fromJSON\"\n"}

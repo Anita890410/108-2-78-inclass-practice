@@ -1,0 +1,3 @@
+"0","covid19$年齡層 %>% factor() %>% levels -> allLevels"
+"2","Error in covid19$年齡層 %>% factor() %>% levels : 沒有這個函數 ""%>%""
+"
