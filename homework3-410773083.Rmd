@@ -56,36 +56,29 @@ names(table_countsByArticle)
 
 提示：table class物件為integer type，可對它取max()得到最大值。
 ```{r ans13}
-violatedArticle <- table(badEmployers$law)
-k2 <- sort(violatedArticle, decreasing = TRUE)
-mostViolatedArticle <- k2[1]
-mostViolatedArticle
+mostViolatedArticle <- 
+  table_countsByArticle[table_countsByArticle == max(table_countsByArticle)]
+
+class(mostViolatedArticle)
 names(mostViolatedArticle)
 as.integer(mostViolatedArticle)
-#class(table_countsByArticle)
-#mostViolatedArticle <- max(table_countsByArticle)
-#badEmployers$law[mostViolatedArticle]
-#mostViolatedArticle
-
-#names(mostViolatedArticle)
-#as.integer(mostViolatedArticle)
+mostViolatedArticle
 ```
-
 ### 1.4 最常違反法條之內容
 找出最常違反條款的法條內容（可參見lawContent這個元素），並將此內容存在mostViolatedArticle_content (class character, length=1)
 ```{r ans14}
-lawContent <- table(badEmployers$lawContent)
-tt <- sort(lawContent, decreasing = TRUE)
-mostViolatedArticle_content <- c(names(tt[1]))
-lawContent
-mostViolatedArticle_content
-class(mostViolatedArticle_content)
+pick_mostViolatedArticle_content <- table(badEmployers$lawContent)>=max(table(badEmployers$lawContent))
+
+mostViolatedArticle_content <- table(badEmployers$lawContent)[pick_mostViolatedArticle_content]
+
+names(mostViolatedArticle_content)
+class(as.character(mostViolatedArticle_content))
+length(mostViolatedArticle_content)
 ```
 
 ### 1.5 處份日期最常落在幾月
 找出處份日期最常出現的月份並存在popularSentenceMonth（class character, length=1）：
 ```{r ans15}
-# popularSentenceMonth
 kframe <- badEmployers['dt']
 kdate <- kframe[['dt']]
 kmonth <- sort(table(month(kdate)), decreasing = TRUE)
@@ -116,9 +109,15 @@ source("https://www.dropbox.com/s/5oy56om4q0857tt/student10.R?dl=1",encoding = "
 小知識:
 factor是從1開始的整數，沒有0喔。
 ```{r ans21}
-chinese <- factor(ordered(table$`級分`+1))
-levels(chinese)
+table$`級分` <- table$`級分`+1
+
+levels(as.factor(table$`國文`))
+table$`國文` <- ordered(table$`國文`)
+
+chinese <- table$`國文`
+
 class(chinese)
+
 chinese
 ```
 
@@ -167,6 +166,12 @@ class(ntpu_eco)
 
 請將榜單文字儲存到名為congrats的答案物件(class為chr)。
 ```{r ans24}
-for(i in 1:length(ntpu_eco)) {cat('恭喜 ', ntpu_eco[i], '同學錄取國立臺北大學經濟系\n')}
-#congrats
+pass <- ntpu_namelist[ntpu_namelist %in% ntpu_eco]
+
+congrats <- 
+  paste0(c("恭喜"),c(pass),c("同學錄取國立臺北大學經濟系"))
+
+class(congrats)
+
+congrats
 ```

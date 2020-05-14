@@ -8,6 +8,10 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+```{r}
+source('https://www.dropbox.com/s/9y7gwbiqze0c3jy/editRenviron.R?dl=1')
+```
 #4.4 Relational Operators
 這節在介紹產生「要/不要」向量的常見手法。
 ```{r}
