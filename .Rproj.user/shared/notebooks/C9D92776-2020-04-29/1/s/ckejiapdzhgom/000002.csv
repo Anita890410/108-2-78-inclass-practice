@@ -21,6 +21,7 @@
 "
 "1","
 "
+"0","#pick_after98 <- example$birthday >= ""1998-01-01"""
 "0","pick_after98 <- example$birthday >= lubridate::ymd(""1998-01-01"")"
 "0","example$name[pick_after98]"
 "1","[1]"

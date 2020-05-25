@@ -1,0 +1,17 @@
+---
+title: '2020-05-20'
+author: "anita"
+date: "2020/5/25"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#4.8 On list
+```{r}
+library(purrr)
+```
+#4.8.1 每個元素相同運算
+在之前的example物件 

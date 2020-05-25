@@ -1,1 +1,4 @@
 "0","pick_loveFood <- example$hobby == ""美食"""
+"0","example$name[pick_loveFood]"
+"1","character(0)
+"
