@@ -156,6 +156,7 @@ startingAges
 # 要numerical class排的才一定對
 startingAges <- as.integer(startingAges)
 startingAges
+level_names
 
 names(startingAges) <- level_names
 startingAges
@@ -321,7 +322,7 @@ forcats::fct_c(factor1, factor2)
 1.將covid19$性別的levels名稱男、女改Male、Female。
 2.以下資料為新北市垃圾車路線
 ```{r}
-jsonlite::fromJSON("https://data.ntpc.gov.tw/od/data/api/EDC3AD26-8AE7-4916-A00B-BC6048D19BF8?$format=json") -> garbageRoutes
+jsonlite::fromJSON("https://data.ntpc.gov.tw/api/datasets/EDC3AD26-8AE7-4916-A00B-BC6048D19BF8/json/preview") -> garbageRoutes
 ```
 1.在garbageRoutes新增route元素，其元素值為對應garbageRoutes$linename裡粹取出的“XXX路線”字眼，如原本“A11路線(一、四)下午”的linename, 它的route值為“A11路線” 。（garbageRoutes$route為factor class)
 

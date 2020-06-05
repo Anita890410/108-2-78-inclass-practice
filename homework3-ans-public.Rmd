@@ -31,7 +31,7 @@ library(jsonlite); library(lubridate); library(readr); library(stringr)
 ## 1 新北市違法雇主
 以下資料來自[新北市違法雇主資料_勞動基準法](https://data.ntpc.gov.tw/od/detail?oid=A3408B16-7B28-4FA5-9834-D147AAE909BF)，執行後可得到badEmployers物件，其底下元素名稱說明可參考來源連結網頁：
 ```{r data1}
-fromJSON("https://data.ntpc.gov.tw/od/data/api/CB6C96C8-D514-42EA-8591-0F4447E79C91?$format=json") -> badEmployers
+jsonlite::fromJSON("https://data.ntpc.gov.tw/api/datasets/A3408B16-7B28-4FA5-9834-D147AAE909BF/json") -> badEmployers
 ```
 
 
@@ -40,6 +40,8 @@ fromJSON("https://data.ntpc.gov.tw/od/data/api/CB6C96C8-D514-42EA-8591-0F4447E79
 ```{r ans11}
 factor(badEmployers$law)-> badEmployers$law
 levels(badEmployers$law)-> violatedArticles
+badEmployers$law
+violatedArticles
 
 # violatedArticles
 ```
@@ -48,6 +50,7 @@ levels(badEmployers$law)-> violatedArticles
 使用table()函數呈現出每個條款的違法廠商數目，存在table_countsByArticle (class table), 正確答案在執行names(table_countsByArticle)時會出現前一題的所有條款。
 ```{r ans12}
 table(badEmployers$law) -> table_countsByArticle
+table_countsByArticle
 
 # table_countsByArticle
 ```
@@ -59,6 +62,7 @@ table(badEmployers$law) -> table_countsByArticle
 ```{r ans13}
 pick_mostViolatedAct <- table_countsByArticle == max(table_countsByArticle)
 table_countsByArticle[pick_mostViolatedAct] -> mostViolatedArticle
+mostViolatedArticle
 
 # mostViolatedArticle
 ```
@@ -69,6 +73,7 @@ table_countsByArticle[pick_mostViolatedAct] -> mostViolatedArticle
 pick_act32_2_violators <- 
   badEmployers$law == names(mostViolatedArticle)
 badEmployers$lawContent[pick_act32_2_violators][[1]] -> mostViolatedArticle_content 
+mostViolatedArticle_content
 
 # mostViolatedArticle_content
 ```
@@ -83,6 +88,7 @@ pick_highestMonth <-
   table_sentenceMonths == max(table_sentenceMonths)
 names(table_sentenceMonths[pick_highestMonth]) -> 
   popularSentenceMonth
+popularSentenceMonth
 
 # popularSentenceMonth
 ```
@@ -114,6 +120,7 @@ factor是從1開始的整數，沒有0喔。
 factor(table$國文,levels=table$國文[c(16:1)],ordered=T) ->
   chinese
 chinese
+
 # chinese
 ```
 
@@ -122,6 +129,7 @@ chinese
 ```{r ans22}
 pick_ntpu <- str_detect(as.character(students10$志願),"北大")
 students10$姓名[pick_ntpu] -> ntpu_namelist
+ntpu_namelist
 
 # ntpu_namelist
 ```
@@ -145,6 +153,7 @@ pick_pass1stLevel <- as.logical(pick_eco*pick_chineseFit*pick_mathEngFit)
 students10$姓名[pick_pass1stLevel] ->
   ntpu_econtpu_eco
 ntpu_econtpu_eco
+
 # ntpu_econtpu_eco
 ```
 
@@ -162,7 +171,10 @@ paste("恭喜",congrats,"同學錄取國立臺北大學經濟系",sep=" ") ->
   congrats
 congrats
 
-ntpu_econtpu_eco[ntpu_econtpu_eco %in% namelist]
+ntpu_econtpu_eco[ntpu_econtpu_eco %in% namelist] -> a
+paste("恭喜",a,"同學錄取國立臺北大學經濟系",sep=" ") ->
+  congrats
+congrats
 
 # congrats
 ```

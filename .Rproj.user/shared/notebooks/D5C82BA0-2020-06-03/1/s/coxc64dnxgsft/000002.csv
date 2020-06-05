@@ -1,0 +1,11 @@
+"0","demand_return"
+"1","function(p){
+"
+"1","    q_d <- 10-5*p
+"
+"1","    return(q_d)
+"
+"1","  }
+"
+"1","<bytecode: 0x000002329192aac0>
+"

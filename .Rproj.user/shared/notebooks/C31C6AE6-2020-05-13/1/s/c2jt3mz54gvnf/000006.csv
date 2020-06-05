@@ -1,3 +1,1 @@
-"0","jsonlite::fromJSON(""https://data.ntpc.gov.tw/od/data/api/EDC3AD26-8AE7-4916-A00B-BC6048D19BF8?$format=json"") -> garbageRoutes"
-"2","Error in open.connection(con, ""rb"") : HTTP error 404.
-"
+"0","jsonlite::fromJSON(""https://data.ntpc.gov.tw/api/datasets/EDC3AD26-8AE7-4916-A00B-BC6048D19BF8/json/preview"") -> garbageRoutes"

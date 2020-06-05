@@ -218,6 +218,8 @@ str_replace(
 levels(differentMajors) <-  currentLevels
 differentMajors
 
+currentLevels
+
 # differentMajors
 ```
 
@@ -251,6 +253,8 @@ str_replace(
 
 levels(school) <- currentLevels
 school
+
+currentLevels
 
 # school
 ```
