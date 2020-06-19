@@ -1,0 +1,25 @@
+"0","knitr::opts_chunk$set(echo = F, eval=F)"
+"0","library(readr); library(stringr); library(purrr); library(magrittr); library(lubridate)"
+"2","package ．readr・ was built under R version 3.5.3"
+"2","package ．stringr・ was built under R version 3.5.3"
+"2","package ．purrr・ was built under R version 3.5.3"
+"2","package ．magrittr・ was built under R version 3.5.3"
+"2","
+Attaching package: ．magrittr・
+
+"
+"2","The following object is masked from ．package:purrr・:
+
+    set_names
+
+"
+"2","package ．lubridate・ was built under R version 3.5.3"
+"2","
+Attaching package: ．lubridate・
+
+"
+"2","The following object is masked from ．package:base・:
+
+    date
+
+"
